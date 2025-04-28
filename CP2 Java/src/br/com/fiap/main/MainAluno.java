@@ -33,7 +33,6 @@ public class MainAluno {
         // Declarando variáveis auxiliares e o Ano sendo armazenado com o objeto anoAtual da classe LocalDate
         String auxiliar;
         int auxiliarRM, auxiliarAnoNasc, idadeAluno1 ,idadeAluno2;
-        int ano = anoAtual.getYear();
 
         // Usando o Try para prevenir erros do usuario
         try {
@@ -60,7 +59,10 @@ public class MainAluno {
             aluno2.setAnoDeNascimento(auxiliarAnoNasc);
 
             // Criando o Printformatado com JOPtionPane
-            String mensagemAlunos = String.format("Aluno 1: %s \nRM: %d \nIdade: %d \n\nAluno 2: %s \nRM: %d \nIdade: %d \n\nAluno 3: %s \nRM: %d \nIdade: %d \n\nAluno 4: %s \nRM: %d \nIdade: %d",aluno1.getNomeCompleto(), aluno1.getRegristroMatricula(), aluno1.calcularIdade(ano),aluno2.getNomeCompleto(), aluno2.getRegristroMatricula(), aluno2.calcularIdade(ano),aluno3.getNomeCompleto(), aluno3.getRegristroMatricula(), aluno3.calcularIdade(ano),aluno4.getNomeCompleto(), aluno4.getRegristroMatricula(), aluno4.calcularIdade(ano));
+            String mensagemAlunos = String.format("Aluno 1: %s \nRM: %d \nIdade: %d \n\nAluno 2: %s \nRM: %d \nIdade: %d \n\nAluno 3: %s \nRM: %d \nIdade: %d \n\nAluno 4: %s \nRM: %d \nIdade: %d"
+                    ,aluno1.getNomeCompleto(), aluno1.getRegristroMatricula(), aluno1.calcularIdade(anoAtual),aluno2.getNomeCompleto(), aluno2.getRegristroMatricula(),
+                    aluno2.calcularIdade(anoAtual),aluno3.getNomeCompleto(), aluno3.getRegristroMatricula(), aluno3.calcularIdade(anoAtual),aluno4.getNomeCompleto(), aluno4.getRegristroMatricula(),
+                    aluno4.calcularIdade(anoAtual));
             JOptionPane.showMessageDialog(null, mensagemAlunos);
 
         } catch (Exception e) {

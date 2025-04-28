@@ -15,7 +15,7 @@ public class Aluno {
     private int anoDeNascimento;
 
 
-    // Criando construtores (Vazio e com parametros)
+    // Criando construtores (Vazio e com parametros) Parte da Aline
     public Aluno() {
     }
 
@@ -26,7 +26,7 @@ public class Aluno {
     }
 
 
-    // Criando Getters e Setters
+    // Criando Getters e Setters - Parte da Aline
     public int getRegristroMatricula() {
         return regristroMatricula;
     }
@@ -34,7 +34,7 @@ public class Aluno {
     public void setRegristroMatricula(int regristroMatricula) {
 
         try {
-            if (regristroMatricula >= 80000 && regristroMatricula <= 599999 ){
+            if (regristroMatricula >= 80000 && regristroMatricula <= 599999){
                 this.regristroMatricula = regristroMatricula;
             } else{
                 throw new Exception("Insira um Número de Matricula (RM) maior/igual do que 80000 e menor/igual do que 599999");
@@ -72,13 +72,12 @@ public class Aluno {
 
     }
 
-    // Criando metodo calcularIdade usando o objeto dataAtual
-    public int calcularIdade(int anoAtual){
-        LocalDate dataAtual = LocalDate.now();
+    // Criando metodo calcularIdade usando o objeto dataAtual - Parte da Poli
+    public int calcularIdade(LocalDate dataAtual) {
+        int idadeAluno;
+        idadeAluno = dataAtual.getYear() - getAnoDeNascimento();
 
-        anoAtual = dataAtual.getYear();
-
-        return anoAtual - anoDeNascimento;
+        return idadeAluno;
     }
 
 }
